@@ -18,15 +18,73 @@
  - Mostra progresso do upload em tempo real.
  - Permite pausar e continuar uploads interrompidos.
 
- ## 🔹 Como usar este script?
+ ## 🔹 Passo a Passo para Usar o Script:
+ - Você vai precisar de: Um computador com Windows (funciona em Linux e Mac também, mas vamos focar no Windows). Conexão com a internet para baixar os programas necessários. Nenhum conhecimento em programação – eu explico tudo do zero.
  
- 1️⃣ Instale o Python (https://www.python.org/downloads/)
+1️⃣ Baixar e Instalar o Python - Python é a linguagem que usaremos para rodar o script.
+Passo a passo:
+ - Acesse o site oficial do Python: 👉 https://www.python.org/downloads/
+ - Clique no botão "Download Python" (a versão mais recente aparecerá automaticamente).
+ - Durante a instalação, marque a opção "Add Python to PATH" (isso facilita a execução no CMD).
+ - Clique em "Install Now" e aguarde a instalação.
  
- 2️⃣ Instale as dependências: pip install telethon
- 
- 3️⃣ Edite a classe Config.
- 
- 4️⃣ Execute o script: python script.py
+2️⃣ Baixar e Instalar o VS Code (Opcional, mas Recomendado) - O Visual Studio Code (VS Code) é um programa que facilita a edição e execução do script.
+Passo a passo:
+ - Baixe o VS Code no site oficial: 👉 https://code.visualstudio.com/
+ - Abra o instalador e clique em "Next" até concluir a instalação.
+ - Na tela de seleção de componentes, marque a opção "Add to PATH" (isso facilita a execução).
+ - Conclua a instalação e abra o VS Code.
+   
+3️⃣ Baixar o Script do GitHub - Agora precisamos baixar o script que será executado.
+Passo a passo:
+ - Acesse o repositório do projeto no GitHub pelo https://github.com/messias519/TAS---Telegram-Automation-Script
+ - Clique no botão "Code" (botão verde).
+ - Escolha a opção "Download ZIP" e aguarde o download.
+ - Extraia a pasta do ZIP para um local fácil de encontrar (por exemplo, Área de Trabalho).
+   
+4️⃣ Instalar a Biblioteca Necessária - O script usa a biblioteca Telethon, então precisamos instalá-la.
+
+Se você baixou o VS Code, siga este passo:
+ - Abra o VS Code.
+ - Clique em "File" → "Open Folder" e selecione a pasta onde salvou o script.
+ - No VS Code, clique em "Terminal" → "New Terminal" (ou pressione Ctrl + J).
+ - Digite o seguinte comando e pressione Enter:
+   pip install telethon
+
+Se você preferir usar o CMD/PowerShell:
+ - Abra o CMD (Prompt de Comando) ou PowerShell.
+ - Navegue até a pasta do script com este comando:
+   cd "C:\Caminho\Para\A\PastadoScript"         # Exemplo: Se a pasta do script estiver na Área de Trabalho, digite: cd "C:\Users\SeuNome\Desktop\NomeDaPastaDoScript"
+ - Instale a biblioteca Telethon:
+   pip install telethon
+
+5️⃣ Configurar o Script - Agora precisamos configurar o script para funcionar corretamente (abaixo um tutorial mais explicado sobre cada um dos itens a serem editados.
+Passo a passo:
+ - Abra a pasta do script no VS Code.
+ - Abra o arquivo config.py (ou a classe Config dentro do script).
+ - Substitua os valores necessários:
+   API_ID = "0000000"  # Seu ID do Telegram
+   API_HASH = "xxxaaa222"  # Seu Hash do Telegram
+   PHONE_NUMBER = "+55DDNúmero"  # Seu número de telefone com código do país
+   SRC_CHAT_ID = -1000000000000  # ID do canal de onde as mensagens serão clonadas
+   DEST_CHAT_ID = -1000000000000  # ID do canal para onde as mensagens serão enviadas
+   UPLOAD_PATH = r"C:\Users\User\Downloads\Arquivos"  # Caminho da pasta/arquivo a ser enviado
+ - Salve as alterações (Ctrl + S).
+
+6️⃣ Executar o Script - Agora vamos rodar o script.
+Se você está usando o VS Code:
+ - No VS Code, clique em "Terminal" → "New Terminal" (Ctrl + J). E digite:
+   python script.py
+ - Pressione Enter.
+
+Se você está usando o CMD/PowerShell:
+ - Abra o CMD (Prompt de Comando) ou PowerShell (pelo próprio executar ou a tecla win + r).
+ - Navegue até a pasta do script com o comando:
+  cd "C:\Caminho\Para\A\PastadoScript"
+ - Execute o script:
+  python script.py
+
+🔹 Se tudo estiver correto, o menu do script aparecerá, e você poderá escolher entre clonar mensagens ou enviar arquivos! ✅
 
  ## 🔹 Como configurar?
  
